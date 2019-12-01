@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_follow_request/:id_to_remove", { :controller => "follow_requests", :action => "destroy_row" })
+  get("/delete_follow_request_from_sender/:id_to_remove", { :controller => "follow_requests", :action => "destroy_row_from_sender" })
 
   #------------------------------
 
@@ -37,6 +38,12 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_like/:id_to_remove", { :controller => "likes", :action => "destroy_row" })
+  get("/delete_like_from_films/:id_to_remove", { :controller => "likes", :action => "destroy_row_from_films" })
+  get("/delete_like_from_podcasts/:id_to_remove", { :controller => "likes", :action => "destroy_row_from_podcasts" })
+  get("/delete_like_from_articles/:id_to_remove", { :controller => "likes", :action => "destroy_row_from_articles" })
+  get("/delete_like_from_shows/:id_to_remove", { :controller => "likes", :action => "destroy_row_from_shows" })
+  get("/delete_like_from_books/:id_to_remove", { :controller => "likes", :action => "destroy_row_from_books" })
+  get("/delete_like_from_users/:id_to_remove", { :controller => "likes", :action => "destroy_row_from_users" })
 
   #------------------------------
 
@@ -56,6 +63,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_film/:id_to_remove", { :controller => "films", :action => "destroy_row" })
+  get("/delete_film_from_users/:id_to_remove", { :controller => "films", :action => "destroy_row_from_users" })
 
   #------------------------------
 
@@ -75,6 +83,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_podcast/:id_to_remove", { :controller => "podcasts", :action => "destroy_row" })
+  get("/delete_podcast_from_users/:id_to_remove", { :controller => "podcasts", :action => "destroy_row_from_users" })
 
   #------------------------------
 
@@ -94,6 +103,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_article/:id_to_remove", { :controller => "articles", :action => "destroy_row" })
+  get("/delete_article_from_users/:id_to_remove", { :controller => "articles", :action => "destroy_row_from_users" })
 
   #------------------------------
 
@@ -113,6 +123,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_show/:id_to_remove", { :controller => "shows", :action => "destroy_row" })
+  get("/delete_show_from_users/:id_to_remove", { :controller => "shows", :action => "destroy_row_from_users" })
 
   #------------------------------
 
@@ -132,6 +143,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_book/:id_to_remove", { :controller => "books", :action => "destroy_row" })
+  get("/delete_book_from_users/:id_to_remove", { :controller => "books", :action => "destroy_row_from_users" })
 
   #------------------------------
 

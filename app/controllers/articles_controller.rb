@@ -63,6 +63,14 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy_row_from_users
+    @article = Article.find(params.fetch("id_to_remove"))
+
+    @article.destroy
+
+    redirect_to("/users/#{@article.users_id}", notice: "Article deleted successfully.")
+  end
+
   def destroy_row
     @article = Article.find(params.fetch("id_to_remove"))
 

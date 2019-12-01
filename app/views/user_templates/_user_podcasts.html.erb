@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Podcasts
+
+    <a data-toggle="collapse" href="#user_podcasts_new_form">
+      Add podcast
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.podcasts.each do |podcast| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/podcasts/<%= podcast.id %>">
+          <%= podcast.title %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>

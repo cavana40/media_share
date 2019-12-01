@@ -61,6 +61,14 @@ class FilmsController < ApplicationController
     end
   end
 
+  def destroy_row_from_users
+    @film = Film.find(params.fetch("id_to_remove"))
+
+    @film.destroy
+
+    redirect_to("/users/#{@film.users_id}", notice: "Film deleted successfully.")
+  end
+
   def destroy_row
     @film = Film.find(params.fetch("id_to_remove"))
 

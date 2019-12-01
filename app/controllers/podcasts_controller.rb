@@ -63,6 +63,14 @@ class PodcastsController < ApplicationController
     end
   end
 
+  def destroy_row_from_users
+    @podcast = Podcast.find(params.fetch("id_to_remove"))
+
+    @podcast.destroy
+
+    redirect_to("/users/#{@podcast.users_id}", notice: "Podcast deleted successfully.")
+  end
+
   def destroy_row
     @podcast = Podcast.find(params.fetch("id_to_remove"))
 

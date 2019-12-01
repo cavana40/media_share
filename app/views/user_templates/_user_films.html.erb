@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Films
+
+    <a data-toggle="collapse" href="#user_films_new_form">
+      Add film
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.films.each do |film| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/films/<%= film.id %>">
+          <%= film.title %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>

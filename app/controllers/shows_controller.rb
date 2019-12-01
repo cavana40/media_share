@@ -61,6 +61,14 @@ class ShowsController < ApplicationController
     end
   end
 
+  def destroy_row_from_users
+    @show = Show.find(params.fetch("id_to_remove"))
+
+    @show.destroy
+
+    redirect_to("/users/#{@show.users_id}", notice: "Show deleted successfully.")
+  end
+
   def destroy_row
     @show = Show.find(params.fetch("id_to_remove"))
 
