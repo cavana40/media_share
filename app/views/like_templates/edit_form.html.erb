@@ -9,15 +9,6 @@
 <!-- Form like end -->
 
   <!-- Label and input for users_id start -->
-  <div class="form-group">
-    <label for="users_id">
-      Users
-    </label>
-
-    <!-- Input for users_id start -->
-    <%= select_tag(:users_id, options_from_collection_for_select(User.all, :id, :email, @like.users_id), :class => "form-control") %>
-    <!-- Input for users_id end -->
-  </div>
   <!-- Label and input for users_id end -->
 
   <!-- Label and input for films_id start -->

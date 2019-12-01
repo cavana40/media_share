@@ -140,7 +140,7 @@ class LikesController < ApplicationController
   def update_row
     @like = Like.find(params.fetch("id_to_modify"))
 
-    @like.users_id = params.fetch("users_id")
+    
     @like.films_id = params.fetch("films_id")
     @like.shows_id = params.fetch("shows_id")
     @like.podcasts_id = params.fetch("podcasts_id")
