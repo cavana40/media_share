@@ -10,7 +10,8 @@ class PodcastsController < ApplicationController
   end
 
   def index
-    @podcasts = Podcast.page(params[:page]).per(10)
+    @q = Podcast.ransack(params[:q])
+    @podcasts = @q.result(:distinct => true).includes(:users, :likes).page(params[:page]).per(10)
 
     render("podcast_templates/index.html.erb")
   end

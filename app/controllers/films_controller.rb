@@ -10,7 +10,8 @@ class FilmsController < ApplicationController
   end
 
   def index
-    @films = Film.page(params[:page]).per(10)
+    @q = Film.ransack(params[:q])
+    @films = @q.result(:distinct => true).includes(:users, :likes).page(params[:page]).per(10)
 
     render("film_templates/index.html.erb")
   end

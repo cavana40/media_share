@@ -10,7 +10,8 @@ class ShowsController < ApplicationController
   end
 
   def index
-    @shows = Show.page(params[:page]).per(10)
+    @q = Show.ransack(params[:q])
+    @shows = @q.result(:distinct => true).includes(:users, :likes).page(params[:page]).per(10)
 
     render("show_templates/index.html.erb")
   end

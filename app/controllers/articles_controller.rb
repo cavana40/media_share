@@ -10,7 +10,8 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.page(params[:page]).per(10)
+    @q = Article.ransack(params[:q])
+    @articles = @q.result(:distinct => true).includes(:users, :likes).page(params[:page]).per(10)
 
     render("article_templates/index.html.erb")
   end
