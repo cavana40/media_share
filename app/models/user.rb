@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :films,
+             :foreign_key => "users_id",
+             :dependent => :destroy
+
   has_many   :shows,
              :foreign_key => "users_id",
              :dependent => :destroy
