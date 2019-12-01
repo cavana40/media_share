@@ -6,6 +6,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @like = Like.new
     @book = Book.find(params.fetch("id_to_display"))
 
     render("book_templates/show.html.erb")

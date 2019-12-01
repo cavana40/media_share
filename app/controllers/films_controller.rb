@@ -6,6 +6,7 @@ class FilmsController < ApplicationController
   end
 
   def show
+    @like = Like.new
     @film = Film.find(params.fetch("id_to_display"))
 
     render("film_templates/show.html.erb")

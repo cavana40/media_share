@@ -36,6 +36,101 @@ class LikesController < ApplicationController
     end
   end
 
+  def create_row_from_book
+    @like = Like.new
+
+    @like.users_id = params.fetch("users_id")
+    @like.films_id = params.fetch("films_id")
+    @like.shows_id = params.fetch("shows_id")
+    @like.podcasts_id = params.fetch("podcasts_id")
+    @like.articles_id = params.fetch("articles_id")
+    @like.books_id = params.fetch("books_id")
+
+    if @like.valid?
+      @like.save
+
+      redirect_to("/books/#{@like.books_id}", notice: "Like created successfully.")
+    else
+      render("like_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_show
+    @like = Like.new
+
+    @like.users_id = params.fetch("users_id")
+    @like.films_id = params.fetch("films_id")
+    @like.shows_id = params.fetch("shows_id")
+    @like.podcasts_id = params.fetch("podcasts_id")
+    @like.articles_id = params.fetch("articles_id")
+    @like.books_id = params.fetch("books_id")
+
+    if @like.valid?
+      @like.save
+
+      redirect_to("/shows/#{@like.shows_id}", notice: "Like created successfully.")
+    else
+      render("like_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_article
+    @like = Like.new
+
+    @like.users_id = params.fetch("users_id")
+    @like.films_id = params.fetch("films_id")
+    @like.shows_id = params.fetch("shows_id")
+    @like.podcasts_id = params.fetch("podcasts_id")
+    @like.articles_id = params.fetch("articles_id")
+    @like.books_id = params.fetch("books_id")
+
+    if @like.valid?
+      @like.save
+
+      redirect_to("/articles/#{@like.articles_id}", notice: "Like created successfully.")
+    else
+      render("like_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_podcast
+    @like = Like.new
+
+    @like.users_id = params.fetch("users_id")
+    @like.films_id = params.fetch("films_id")
+    @like.shows_id = params.fetch("shows_id")
+    @like.podcasts_id = params.fetch("podcasts_id")
+    @like.articles_id = params.fetch("articles_id")
+    @like.books_id = params.fetch("books_id")
+
+    if @like.valid?
+      @like.save
+
+      redirect_to("/podcasts/#{@like.podcasts_id}", notice: "Like created successfully.")
+    else
+      render("like_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_film
+    @like = Like.new
+
+    @like.users_id = params.fetch("users_id")
+    @like.films_id = params.fetch("films_id")
+    @like.shows_id = params.fetch("shows_id")
+    @like.podcasts_id = params.fetch("podcasts_id")
+    @like.articles_id = params.fetch("articles_id")
+    @like.books_id = params.fetch("books_id")
+
+    if @like.valid?
+      @like.save
+
+      redirect_to("/films/#{@like.films_id}", notice: "Like created successfully.")
+    else
+      render("like_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @like = Like.find(params.fetch("prefill_with_id"))
 

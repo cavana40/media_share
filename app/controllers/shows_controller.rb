@@ -6,6 +6,7 @@ class ShowsController < ApplicationController
   end
 
   def show
+    @like = Like.new
     @show = Show.find(params.fetch("id_to_display"))
 
     render("show_templates/show.html.erb")

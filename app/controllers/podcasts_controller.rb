@@ -6,6 +6,7 @@ class PodcastsController < ApplicationController
   end
 
   def show
+    @like = Like.new
     @podcast = Podcast.find(params.fetch("id_to_display"))
 
     render("podcast_templates/show.html.erb")

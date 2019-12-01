@@ -27,6 +27,11 @@ Rails.application.routes.draw do
   # CREATE
   get("/likes/new", { :controller => "likes", :action => "new_form" })
   post("/create_like", { :controller => "likes", :action => "create_row" })
+  post("/create_like_from_film", { :controller => "likes", :action => "create_row_from_film" })
+  post("/create_like_from_podcast", { :controller => "likes", :action => "create_row_from_podcast" })
+  post("/create_like_from_article", { :controller => "likes", :action => "create_row_from_article" })
+  post("/create_like_from_show", { :controller => "likes", :action => "create_row_from_show" })
+  post("/create_like_from_book", { :controller => "likes", :action => "create_row_from_book" })
 
   # READ
   get("/likes", { :controller => "likes", :action => "index" })

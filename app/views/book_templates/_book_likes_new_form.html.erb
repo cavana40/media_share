@@ -1,0 +1,73 @@
+<!-- Form like start -->
+<form action="/create_like_from_book" method="post">
+<!-- Form like end -->
+
+  <!-- Label and input for users_id start -->
+  <div class="form-group">
+    <label for="users_id">
+      Users
+    </label>
+
+    <!-- Input for users_id start -->
+    <input type="text" id="users_id" name="users_id" class="form-control" value="<%= @like.users_id %>">
+    <!-- Input for users_id end -->
+  </div>
+  <!-- Label and input for users_id end -->
+
+  <!-- Label and input for films_id start -->
+  <div class="form-group">
+    <label for="films_id">
+      Films
+    </label>
+
+    <!-- Input for films_id start -->
+    <input type="text" id="films_id" name="films_id" class="form-control" value="<%= @like.films_id %>">
+    <!-- Input for films_id end -->
+  </div>
+  <!-- Label and input for films_id end -->
+
+  <!-- Label and input for shows_id start -->
+  <div class="form-group">
+    <label for="shows_id">
+      Shows
+    </label>
+
+    <!-- Input for shows_id start -->
+    <input type="text" id="shows_id" name="shows_id" class="form-control" value="<%= @like.shows_id %>">
+    <!-- Input for shows_id end -->
+  </div>
+  <!-- Label and input for shows_id end -->
+
+  <!-- Label and input for podcasts_id start -->
+  <div class="form-group">
+    <label for="podcasts_id">
+      Podcasts
+    </label>
+
+    <!-- Input for podcasts_id start -->
+    <input type="text" id="podcasts_id" name="podcasts_id" class="form-control" value="<%= @like.podcasts_id %>">
+    <!-- Input for podcasts_id end -->
+  </div>
+  <!-- Label and input for podcasts_id end -->
+
+  <!-- Label and input for articles_id start -->
+  <div class="form-group">
+    <label for="articles_id">
+      Articles
+    </label>
+
+    <!-- Input for articles_id start -->
+    <input type="text" id="articles_id" name="articles_id" class="form-control" value="<%= @like.articles_id %>">
+    <!-- Input for articles_id end -->
+  </div>
+  <!-- Label and input for articles_id end -->
+
+  <!-- Label and input for books_id start -->
+  <!-- Input for books_id start -->
+  <input type="hidden" name="books_id" value="<%= @book.id %>">
+  <!-- Input for books_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create like
+  </button>
+</form>
