@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "books#index"
   # Routes for the Follow request resource:
 
   # CREATE
