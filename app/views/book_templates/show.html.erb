@@ -1,0 +1,109 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Book #<%= @book.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/books" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link book start -->
+      <div class="col">
+        <a href="/books/<%= @book.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit book
+        </a>
+      </div>
+      <!-- Edit link book end -->
+
+      <!-- Delete link book start -->
+      <div class="col">
+        <a href="/delete_book/<%= @book.id %>" class="btn btn-block btn-outline-secondary">
+          Delete book
+        </a>
+      </div>
+      <!-- Delete link book end -->
+    </div>
+
+    <dl>
+      <dt>
+        Title
+      </dt>
+      <!-- Display title start -->
+      <dd>
+        <%= @book.title %>
+      </dd>
+      <!-- Display title end -->
+
+      <dt>
+        Author
+      </dt>
+      <!-- Display author start -->
+      <dd>
+        <%= @book.author %>
+      </dd>
+      <!-- Display author end -->
+
+      <dt>
+        Description
+      </dt>
+      <!-- Display description start -->
+      <dd>
+        <%= @book.description %>
+      </dd>
+      <!-- Display description end -->
+
+      <dt>
+        Users
+      </dt>
+      <!-- Display users_id start -->
+      <dd>
+        <%= @book.users_id %>
+      </dd>
+      <!-- Display users_id end -->
+
+      <dt>
+        Genre topic
+      </dt>
+      <!-- Display genre_topic start -->
+      <dd>
+        <%= @book.genre_topic %>
+      </dd>
+      <!-- Display genre_topic end -->
+
+      <dt>
+        Comments
+      </dt>
+      <!-- Display comments start -->
+      <dd>
+        <%= @book.comments %>
+      </dd>
+      <!-- Display comments end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@book.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@book.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
