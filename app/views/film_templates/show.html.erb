@@ -13,17 +13,21 @@
 
       <!-- Edit link film start -->
       <div class="col">
-        <a href="/films/<%= @film.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit film
-        </a>
+        <% if current_user == @film.users %>
+          <a href="/films/<%= @film.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit film
+          </a>
+        <% end %>
       </div>
       <!-- Edit link film end -->
 
       <!-- Delete link film start -->
       <div class="col">
-        <a href="/delete_film/<%= @film.id %>" class="btn btn-block btn-outline-secondary">
-          Delete film
-        </a>
+        <% if current_user == @film.users %>
+          <a href="/delete_film/<%= @film.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete film
+          </a>
+        <% end %>
       </div>
       <!-- Delete link film end -->
     </div>
