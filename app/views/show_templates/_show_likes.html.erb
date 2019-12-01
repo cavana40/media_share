@@ -17,9 +17,11 @@
         <!-- Show link end -->
 
         <!-- Delete link start -->
-        <a href="/delete_like_from_shows/<%= like.id %>">
-          Delete
-        </a>
+        <%if current_user == like.users %>
+          <a href="/delete_like_from_show/<%= like.id %>">
+            Delete
+          </a>
+        <% end %>
         <!-- Delete link end -->
 
       </li>
