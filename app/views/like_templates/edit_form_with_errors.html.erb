@@ -24,7 +24,7 @@
     </label>
 
     <!-- Input for users_id start -->
-    <input type="text" id="users_id" name="users_id" class="form-control" value="<%= @like.users_id %>">
+    <%= select_tag(:users_id, options_from_collection_for_select(User.all, :id, :email, @like.users_id), :class => "form-control") %>
     <!-- Input for users_id end -->
   </div>
   <!-- Label and input for users_id end -->
