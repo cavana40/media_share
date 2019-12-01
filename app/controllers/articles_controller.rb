@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all
+    @articles = Article.page(params[:page]).per(10)
 
     render("article_templates/index.html.erb")
   end

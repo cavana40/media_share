@@ -10,7 +10,7 @@ class ShowsController < ApplicationController
   end
 
   def index
-    @shows = Show.all
+    @shows = Show.page(params[:page]).per(10)
 
     render("show_templates/index.html.erb")
   end

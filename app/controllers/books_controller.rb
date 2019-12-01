@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    @books = Book.page(params[:page]).per(10)
 
     render("book_templates/index.html.erb")
   end

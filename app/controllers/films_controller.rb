@@ -10,7 +10,7 @@ class FilmsController < ApplicationController
   end
 
   def index
-    @films = Film.all
+    @films = Film.page(params[:page]).per(10)
 
     render("film_templates/index.html.erb")
   end
