@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :podcasts,
+             :foreign_key => "users_id",
+             :dependent => :destroy
+
   has_many   :articles,
              :foreign_key => "users_id",
              :dependent => :destroy
