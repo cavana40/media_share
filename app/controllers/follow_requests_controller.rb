@@ -42,7 +42,7 @@ class FollowRequestsController < ApplicationController
     @follow_request = FollowRequest.find(params.fetch("id_to_modify"))
 
     @follow_request.recipient_id = params.fetch("recipient_id")
-    @follow_request.sender_id = params.fetch("sender_id")
+    
 
     if @follow_request.valid?
       @follow_request.save
