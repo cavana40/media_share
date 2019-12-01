@@ -1,0 +1,118 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Article #<%= @article.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/articles" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link article start -->
+      <div class="col">
+        <a href="/articles/<%= @article.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit article
+        </a>
+      </div>
+      <!-- Edit link article end -->
+
+      <!-- Delete link article start -->
+      <div class="col">
+        <a href="/delete_article/<%= @article.id %>" class="btn btn-block btn-outline-secondary">
+          Delete article
+        </a>
+      </div>
+      <!-- Delete link article end -->
+    </div>
+
+    <dl>
+      <dt>
+        Title
+      </dt>
+      <!-- Display title start -->
+      <dd>
+        <%= @article.title %>
+      </dd>
+      <!-- Display title end -->
+
+      <dt>
+        Author
+      </dt>
+      <!-- Display author start -->
+      <dd>
+        <%= @article.author %>
+      </dd>
+      <!-- Display author end -->
+
+      <dt>
+        Link
+      </dt>
+      <!-- Display link start -->
+      <dd>
+        <%= @article.link %>
+      </dd>
+      <!-- Display link end -->
+
+      <dt>
+        Users
+      </dt>
+      <!-- Display users_id start -->
+      <dd>
+        <%= @article.users_id %>
+      </dd>
+      <!-- Display users_id end -->
+
+      <dt>
+        Genre topic
+      </dt>
+      <!-- Display genre_topic start -->
+      <dd>
+        <%= @article.genre_topic %>
+      </dd>
+      <!-- Display genre_topic end -->
+
+      <dt>
+        Description
+      </dt>
+      <!-- Display description start -->
+      <dd>
+        <%= @article.description %>
+      </dd>
+      <!-- Display description end -->
+
+      <dt>
+        Comments
+      </dt>
+      <!-- Display comments start -->
+      <dd>
+        <%= @article.comments %>
+      </dd>
+      <!-- Display comments end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@article.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@article.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
