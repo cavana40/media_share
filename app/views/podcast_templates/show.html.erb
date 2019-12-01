@@ -13,17 +13,21 @@
 
       <!-- Edit link podcast start -->
       <div class="col">
-        <a href="/podcasts/<%= @podcast.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit podcast
-        </a>
+        <% if current_user == @podcast.users %>
+          <a href="/podcasts/<%= @podcast.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit podcast
+          </a>
+        <% end %>
       </div>
       <!-- Edit link podcast end -->
 
       <!-- Delete link podcast start -->
       <div class="col">
-        <a href="/delete_podcast/<%= @podcast.id %>" class="btn btn-block btn-outline-secondary">
-          Delete podcast
-        </a>
+        <% if current_user == @podcast.users %>
+          <a href="/delete_podcast/<%= @podcast.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete podcast
+          </a>
+        <% end %>
       </div>
       <!-- Delete link podcast end -->
     </div>
