@@ -38,7 +38,11 @@
       </dt>
       <!-- Display users_id start -->
       <dd>
-        <%= @like.users_id %>
+        <% if @like.users.present? %>
+          <a href="/users/<%= @like.users_id %>">
+            <%= @like.users.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display users_id end -->
 
@@ -47,7 +51,11 @@
       </dt>
       <!-- Display films_id start -->
       <dd>
-        <%= @like.films_id %>
+        <% if @like.films.present? %>
+          <a href="/films/<%= @like.films_id %>">
+            <%= @like.films.title %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display films_id end -->
 
@@ -56,7 +64,11 @@
       </dt>
       <!-- Display shows_id start -->
       <dd>
-        <%= @like.shows_id %>
+        <% if @like.shows.present? %>
+          <a href="/shows/<%= @like.shows_id %>">
+            <%= @like.shows.title %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display shows_id end -->
 
@@ -65,7 +77,11 @@
       </dt>
       <!-- Display podcasts_id start -->
       <dd>
-        <%= @like.podcasts_id %>
+        <% if @like.podcasts.present? %>
+          <a href="/podcasts/<%= @like.podcasts_id %>">
+            <%= @like.podcasts.title %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display podcasts_id end -->
 
@@ -74,7 +90,11 @@
       </dt>
       <!-- Display articles_id start -->
       <dd>
-        <%= @like.articles_id %>
+        <% if @like.articles.present? %>
+          <a href="/articles/<%= @like.articles_id %>">
+            <%= @like.articles.users_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display articles_id end -->
 
@@ -83,7 +103,11 @@
       </dt>
       <!-- Display books_id start -->
       <dd>
-        <%= @like.books_id %>
+        <% if @like.books.present? %>
+          <a href="/books/<%= @like.books_id %>">
+            <%= @like.books.title %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display books_id end -->
 

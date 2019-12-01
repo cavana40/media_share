@@ -86,7 +86,11 @@
 
         <!-- Display show.users_id start -->
         <td>
-          <%= show.users.email %>
+          <% if show.users.present? %>
+            <a href="/users/<%= show.users.id %>">
+              <%= show.users.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display show.users_id end -->
 

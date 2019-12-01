@@ -86,7 +86,11 @@
 
         <!-- Display film.users_id start -->
         <td>
-          <%= film.users.email %>
+          <% if film.users.present? %>
+            <a href="/users/<%= film.users.id %>">
+              <%= film.users.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display film.users_id end -->
 

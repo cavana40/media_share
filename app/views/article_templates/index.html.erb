@@ -96,7 +96,11 @@
 
         <!-- Display article.users_id start -->
         <td>
-          <%= article.users.email %>
+          <% if article.users.present? %>
+            <a href="/users/<%= article.users.id %>">
+              <%= article.users.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display article.users_id end -->
 

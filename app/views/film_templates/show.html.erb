@@ -56,7 +56,11 @@
       </dt>
       <!-- Display users_id start -->
       <dd>
-        <%= @film.users_id %>
+        <% if @film.users.present? %>
+          <a href="/users/<%= @film.users_id %>">
+            <%= @film.users.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display users_id end -->
 

@@ -65,7 +65,11 @@
       </dt>
       <!-- Display users_id start -->
       <dd>
-        <%= @podcast.users_id %>
+        <% if @podcast.users.present? %>
+          <a href="/users/<%= @podcast.users_id %>">
+            <%= @podcast.users.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display users_id end -->
 

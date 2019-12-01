@@ -92,7 +92,11 @@
 
         <!-- Display book.users_id start -->
         <td>
-          <%= book.users.email %>
+          <% if book.users.present? %>
+            <a href="/users/<%= book.users.id %>">
+              <%= book.users.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display book.users_id end -->
 

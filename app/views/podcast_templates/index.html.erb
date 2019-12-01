@@ -96,7 +96,11 @@
 
         <!-- Display podcast.users_id start -->
         <td>
-          <%= podcast.users.email %>
+          <% if podcast.users.present? %>
+            <a href="/users/<%= podcast.users.id %>">
+              <%= podcast.users.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display podcast.users_id end -->
 

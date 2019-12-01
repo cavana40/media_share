@@ -74,37 +74,61 @@
 
         <!-- Display like.users_id start -->
         <td>
-          <%= like.users.email %>
+          <% if like.users.present? %>
+            <a href="/users/<%= like.users.id %>">
+              <%= like.users.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display like.users_id end -->
 
         <!-- Display like.films_id start -->
         <td>
-          <%= like.films.title %>
+          <% if like.films.present? %>
+            <a href="/films/<%= like.films.id %>">
+              <%= like.films.title %>
+            </a>
+          <% end %>
         </td>
         <!-- Display like.films_id end -->
 
         <!-- Display like.shows_id start -->
         <td>
-          <%= like.shows.title %>
+          <% if like.shows.present? %>
+            <a href="/shows/<%= like.shows.id %>">
+              <%= like.shows.title %>
+            </a>
+          <% end %>
         </td>
         <!-- Display like.shows_id end -->
 
         <!-- Display like.podcasts_id start -->
         <td>
-          <%= like.podcasts.title %>
+          <% if like.podcasts.present? %>
+            <a href="/podcasts/<%= like.podcasts.id %>">
+              <%= like.podcasts.title %>
+            </a>
+          <% end %>
         </td>
         <!-- Display like.podcasts_id end -->
 
         <!-- Display like.articles_id start -->
         <td>
-          <%= like.articles.users_id %>
+          <% if like.articles.present? %>
+            <a href="/articles/<%= like.articles.id %>">
+              <%= like.articles.users_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display like.articles_id end -->
 
         <!-- Display like.books_id start -->
         <td>
-          <%= like.books.title %>
+          <% if like.books.present? %>
+            <a href="/books/<%= like.books.id %>">
+              <%= like.books.title %>
+            </a>
+          <% end %>
         </td>
         <!-- Display like.books_id end -->
 
