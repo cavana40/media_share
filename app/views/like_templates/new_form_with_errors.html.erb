@@ -51,7 +51,7 @@
     </label>
 
     <!-- Input for shows_id start -->
-    <input type="text" id="shows_id" name="shows_id" class="form-control" value="<%= @like.shows_id %>">
+    <%= select_tag(:shows_id, options_from_collection_for_select(Show.all, :id, :title, @like.shows_id), :class => "form-control") %>
     <!-- Input for shows_id end -->
   </div>
   <!-- Label and input for shows_id end -->
