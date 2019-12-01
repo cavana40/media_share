@@ -50,7 +50,7 @@ class PodcastsController < ApplicationController
     @podcast.title = params.fetch("title")
     @podcast.source = params.fetch("source")
     @podcast.favorite_episode = params.fetch("favorite_episode")
-    @podcast.users_id = params.fetch("users_id")
+    
     @podcast.genre_topic = params.fetch("genre_topic")
     @podcast.description = params.fetch("description")
     @podcast.comments = params.fetch("comments")
