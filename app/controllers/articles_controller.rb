@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
     @article.title = params.fetch("title")
     @article.author = params.fetch("author")
     @article.link = params.fetch("link")
-    @article.users_id = params.fetch("users_id")
+    
     @article.genre_topic = params.fetch("genre_topic")
     @article.description = params.fetch("description")
     @article.comments = params.fetch("comments")
