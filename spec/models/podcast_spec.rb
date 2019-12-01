@@ -4,6 +4,8 @@ RSpec.describe Podcast, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:likes) }
+
     it { should belong_to(:users) }
 
     end

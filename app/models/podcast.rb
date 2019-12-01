@@ -1,6 +1,10 @@
 class Podcast < ApplicationRecord
   # Direct associations
 
+  has_many   :likes,
+             :foreign_key => "podcasts_id",
+             :dependent => :destroy
+
   belongs_to :users,
              :class_name => "User"
 
