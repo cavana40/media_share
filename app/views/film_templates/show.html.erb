@@ -1,0 +1,109 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Film #<%= @film.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/films" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link film start -->
+      <div class="col">
+        <a href="/films/<%= @film.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit film
+        </a>
+      </div>
+      <!-- Edit link film end -->
+
+      <!-- Delete link film start -->
+      <div class="col">
+        <a href="/delete_film/<%= @film.id %>" class="btn btn-block btn-outline-secondary">
+          Delete film
+        </a>
+      </div>
+      <!-- Delete link film end -->
+    </div>
+
+    <dl>
+      <dt>
+        Title
+      </dt>
+      <!-- Display title start -->
+      <dd>
+        <%= @film.title %>
+      </dd>
+      <!-- Display title end -->
+
+      <dt>
+        Source
+      </dt>
+      <!-- Display source start -->
+      <dd>
+        <%= @film.source %>
+      </dd>
+      <!-- Display source end -->
+
+      <dt>
+        Users
+      </dt>
+      <!-- Display users_id start -->
+      <dd>
+        <%= @film.users_id %>
+      </dd>
+      <!-- Display users_id end -->
+
+      <dt>
+        Genre topic
+      </dt>
+      <!-- Display genre_topic start -->
+      <dd>
+        <%= @film.genre_topic %>
+      </dd>
+      <!-- Display genre_topic end -->
+
+      <dt>
+        Description
+      </dt>
+      <!-- Display description start -->
+      <dd>
+        <%= @film.description %>
+      </dd>
+      <!-- Display description end -->
+
+      <dt>
+        Comments
+      </dt>
+      <!-- Display comments start -->
+      <dd>
+        <%= @film.comments %>
+      </dd>
+      <!-- Display comments end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@film.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@film.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->

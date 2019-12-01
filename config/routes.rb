@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Film resource:
+
+  # CREATE
+  get("/films/new", { :controller => "films", :action => "new_form" })
+  post("/create_film", { :controller => "films", :action => "create_row" })
+
+  # READ
+  get("/films", { :controller => "films", :action => "index" })
+  get("/films/:id_to_display", { :controller => "films", :action => "show" })
+
+  # UPDATE
+  get("/films/:prefill_with_id/edit", { :controller => "films", :action => "edit_form" })
+  post("/update_film/:id_to_modify", { :controller => "films", :action => "update_row" })
+
+  # DELETE
+  get("/delete_film/:id_to_remove", { :controller => "films", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Podcast resource:
 
   # CREATE
