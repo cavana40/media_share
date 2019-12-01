@@ -28,7 +28,7 @@
     </label>
 
     <!-- Input for films_id start -->
-    <input type="text" id="films_id" name="films_id" class="form-control">
+    <%= select_tag(:films_id, options_from_collection_for_select(Film.all, :id, :title, @like.films_id), :class => "form-control") %>
     <!-- Input for films_id end -->
   </div>
   <!-- Label and input for films_id end -->
