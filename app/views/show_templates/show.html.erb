@@ -1,0 +1,109 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Show #<%= @show.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/shows" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link show start -->
+      <div class="col">
+        <a href="/shows/<%= @show.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit show
+        </a>
+      </div>
+      <!-- Edit link show end -->
+
+      <!-- Delete link show start -->
+      <div class="col">
+        <a href="/delete_show/<%= @show.id %>" class="btn btn-block btn-outline-secondary">
+          Delete show
+        </a>
+      </div>
+      <!-- Delete link show end -->
+    </div>
+
+    <dl>
+      <dt>
+        Title
+      </dt>
+      <!-- Display title start -->
+      <dd>
+        <%= @show.title %>
+      </dd>
+      <!-- Display title end -->
+
+      <dt>
+        Source
+      </dt>
+      <!-- Display source start -->
+      <dd>
+        <%= @show.source %>
+      </dd>
+      <!-- Display source end -->
+
+      <dt>
+        Users
+      </dt>
+      <!-- Display users_id start -->
+      <dd>
+        <%= @show.users_id %>
+      </dd>
+      <!-- Display users_id end -->
+
+      <dt>
+        Genre topic
+      </dt>
+      <!-- Display genre_topic start -->
+      <dd>
+        <%= @show.genre_topic %>
+      </dd>
+      <!-- Display genre_topic end -->
+
+      <dt>
+        Description
+      </dt>
+      <!-- Display description start -->
+      <dd>
+        <%= @show.description %>
+      </dd>
+      <!-- Display description end -->
+
+      <dt>
+        Comments
+      </dt>
+      <!-- Display comments start -->
+      <dd>
+        <%= @show.comments %>
+      </dd>
+      <!-- Display comments end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@show.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@show.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
