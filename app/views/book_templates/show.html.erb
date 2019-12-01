@@ -13,17 +13,21 @@
 
       <!-- Edit link book start -->
       <div class="col">
-        <a href="/books/<%= @book.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit book
-        </a>
+        <% if current_user == @book.users %>
+          <a href="/books/<%= @book.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit book
+          </a>
+        <% end %>
       </div>
       <!-- Edit link book end -->
 
       <!-- Delete link book start -->
       <div class="col">
-        <a href="/delete_book/<%= @book.id %>" class="btn btn-block btn-outline-secondary">
-          Delete book
-        </a>
+        <% if current_user == @book.users %>
+          <a href="/delete_book/<%= @book.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete book
+          </a>
+        <% end %>
       </div>
       <!-- Delete link book end -->
     </div>
