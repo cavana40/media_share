@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link show start -->
       <div class="col">
         <% if current_user == @show.users %>
           <a href="/shows/<%= @show.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link show end -->
 
-      <!-- Delete link show start -->
       <div class="col">
         <% if current_user == @show.users %>
           <a href="/delete_show/<%= @show.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,32 +26,26 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link show end -->
     </div>
 
     <dl>
       <dt>
         Title
       </dt>
-      <!-- Display title start -->
       <dd>
         <%= @show.title %>
       </dd>
-      <!-- Display title end -->
 
       <dt>
         Source
       </dt>
-      <!-- Display source start -->
       <dd>
         <%= @show.source %>
       </dd>
-      <!-- Display source end -->
 
       <dt>
         Users
       </dt>
-      <!-- Display users_id start -->
       <dd>
         <% if @show.users.present? %>
           <a href="/users/<%= @show.users_id %>">
@@ -62,60 +53,47 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display users_id end -->
 
       <dt>
         Genre topic
       </dt>
-      <!-- Display genre_topic start -->
       <dd>
         <%= @show.genre_topic %>
       </dd>
-      <!-- Display genre_topic end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @show.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Comments
       </dt>
-      <!-- Display comments start -->
       <dd>
         <%= @show.comments %>
       </dd>
-      <!-- Display comments end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@show.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@show.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "show_templates/show_likes" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

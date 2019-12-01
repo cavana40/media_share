@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link podcast start -->
       <div class="col">
         <% if current_user == @podcast.users %>
           <a href="/podcasts/<%= @podcast.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link podcast end -->
 
-      <!-- Delete link podcast start -->
       <div class="col">
         <% if current_user == @podcast.users %>
           <a href="/delete_podcast/<%= @podcast.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,41 +26,33 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link podcast end -->
     </div>
 
     <dl>
       <dt>
         Title
       </dt>
-      <!-- Display title start -->
       <dd>
         <%= @podcast.title %>
       </dd>
-      <!-- Display title end -->
 
       <dt>
         Source
       </dt>
-      <!-- Display source start -->
       <dd>
         <%= @podcast.source %>
       </dd>
-      <!-- Display source end -->
 
       <dt>
         Favorite episode
       </dt>
-      <!-- Display favorite_episode start -->
       <dd>
         <%= @podcast.favorite_episode %>
       </dd>
-      <!-- Display favorite_episode end -->
 
       <dt>
         Users
       </dt>
-      <!-- Display users_id start -->
       <dd>
         <% if @podcast.users.present? %>
           <a href="/users/<%= @podcast.users_id %>">
@@ -71,60 +60,47 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display users_id end -->
 
       <dt>
         Genre topic
       </dt>
-      <!-- Display genre_topic start -->
       <dd>
         <%= @podcast.genre_topic %>
       </dd>
-      <!-- Display genre_topic end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @podcast.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Comments
       </dt>
-      <!-- Display comments start -->
       <dd>
         <%= @podcast.comments %>
       </dd>
-      <!-- Display comments end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@podcast.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@podcast.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "podcast_templates/podcast_likes" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

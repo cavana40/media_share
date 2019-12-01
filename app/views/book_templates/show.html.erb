@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link book start -->
       <div class="col">
         <% if current_user == @book.users %>
           <a href="/books/<%= @book.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link book end -->
 
-      <!-- Delete link book start -->
       <div class="col">
         <% if current_user == @book.users %>
           <a href="/delete_book/<%= @book.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,41 +26,33 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link book end -->
     </div>
 
     <dl>
       <dt>
         Title
       </dt>
-      <!-- Display title start -->
       <dd>
         <%= @book.title %>
       </dd>
-      <!-- Display title end -->
 
       <dt>
         Author
       </dt>
-      <!-- Display author start -->
       <dd>
         <%= @book.author %>
       </dd>
-      <!-- Display author end -->
 
       <dt>
         Description
       </dt>
-      <!-- Display description start -->
       <dd>
         <%= @book.description %>
       </dd>
-      <!-- Display description end -->
 
       <dt>
         Users
       </dt>
-      <!-- Display users_id start -->
       <dd>
         <% if @book.users.present? %>
           <a href="/users/<%= @book.users_id %>">
@@ -71,51 +60,40 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display users_id end -->
 
       <dt>
         Genre topic
       </dt>
-      <!-- Display genre_topic start -->
       <dd>
         <%= @book.genre_topic %>
       </dd>
-      <!-- Display genre_topic end -->
 
       <dt>
         Comments
       </dt>
-      <!-- Display comments start -->
       <dd>
         <%= @book.comments %>
       </dd>
-      <!-- Display comments end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@book.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@book.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "book_templates/book_likes" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

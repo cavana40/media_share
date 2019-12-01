@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link like start -->
       <div class="col">
         <% if current_user == @like.users %>
           <a href="/likes/<%= @like.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link like end -->
 
-      <!-- Delete link like start -->
       <div class="col">
         <% if current_user == @like.users %>
           <a href="/delete_like/<%= @like.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link like end -->
     </div>
 
     <dl>
       <dt>
         Users
       </dt>
-      <!-- Display users_id start -->
       <dd>
         <% if @like.users.present? %>
           <a href="/users/<%= @like.users_id %>">
@@ -44,12 +39,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display users_id end -->
 
       <dt>
         Films
       </dt>
-      <!-- Display films_id start -->
       <dd>
         <% if @like.films.present? %>
           <a href="/films/<%= @like.films_id %>">
@@ -57,12 +50,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display films_id end -->
 
       <dt>
         Shows
       </dt>
-      <!-- Display shows_id start -->
       <dd>
         <% if @like.shows.present? %>
           <a href="/shows/<%= @like.shows_id %>">
@@ -70,12 +61,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display shows_id end -->
 
       <dt>
         Podcasts
       </dt>
-      <!-- Display podcasts_id start -->
       <dd>
         <% if @like.podcasts.present? %>
           <a href="/podcasts/<%= @like.podcasts_id %>">
@@ -83,12 +72,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display podcasts_id end -->
 
       <dt>
         Articles
       </dt>
-      <!-- Display articles_id start -->
       <dd>
         <% if @like.articles.present? %>
           <a href="/articles/<%= @like.articles_id %>">
@@ -96,12 +83,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display articles_id end -->
 
       <dt>
         Books
       </dt>
-      <!-- Display books_id start -->
       <dd>
         <% if @like.books.present? %>
           <a href="/books/<%= @like.books_id %>">
@@ -109,28 +94,21 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display books_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@like.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@like.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

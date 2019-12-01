@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "show_templates/shows_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -70,25 +66,18 @@
 
       <% @shows.each do |show| %>
       <tr>
-        <!-- Display show.id start -->
         <td>
           <%= show.id %>
         </td>
-        <!-- Display show.id end -->
 
-        <!-- Display show.title start -->
         <td>
           <%= show.title %>
         </td>
-        <!-- Display show.title end -->
 
-        <!-- Display show.source start -->
         <td>
           <%= show.source %>
         </td>
-        <!-- Display show.source end -->
 
-        <!-- Display show.users_id start -->
         <td>
           <% if show.users.present? %>
             <a href="/users/<%= show.users.id %>">
@@ -96,37 +85,26 @@
             </a>
           <% end %>
         </td>
-        <!-- Display show.users_id end -->
 
-        <!-- Display show.genre_topic start -->
         <td>
           <%= show.genre_topic %>
         </td>
-        <!-- Display show.genre_topic end -->
 
-        <!-- Display show.description start -->
         <td>
           <%= show.description %>
         </td>
-        <!-- Display show.description end -->
 
-        <!-- Display show.comments start -->
         <td>
           <%= show.comments %>
         </td>
-        <!-- Display show.comments end -->
 
-        <!-- Display show.created_at start -->
         <td>
           <%= time_ago_in_words(show.created_at) %> ago
         </td>
-        <!-- Display show.created_at end -->
 
-        <!-- Display show.updated_at start -->
         <td>
           <%= time_ago_in_words(show.updated_at) %> ago
         </td>
-        <!-- Display show.updated_at end -->
 
         <td>
           <a href="/shows/<%= show.id %>">

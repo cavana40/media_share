@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "film_templates/films_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -70,25 +66,18 @@
 
       <% @films.each do |film| %>
       <tr>
-        <!-- Display film.id start -->
         <td>
           <%= film.id %>
         </td>
-        <!-- Display film.id end -->
 
-        <!-- Display film.title start -->
         <td>
           <%= film.title %>
         </td>
-        <!-- Display film.title end -->
 
-        <!-- Display film.source start -->
         <td>
           <%= film.source %>
         </td>
-        <!-- Display film.source end -->
 
-        <!-- Display film.users_id start -->
         <td>
           <% if film.users.present? %>
             <a href="/users/<%= film.users.id %>">
@@ -96,37 +85,26 @@
             </a>
           <% end %>
         </td>
-        <!-- Display film.users_id end -->
 
-        <!-- Display film.genre_topic start -->
         <td>
           <%= film.genre_topic %>
         </td>
-        <!-- Display film.genre_topic end -->
 
-        <!-- Display film.description start -->
         <td>
           <%= film.description %>
         </td>
-        <!-- Display film.description end -->
 
-        <!-- Display film.comments start -->
         <td>
           <%= film.comments %>
         </td>
-        <!-- Display film.comments end -->
 
-        <!-- Display film.created_at start -->
         <td>
           <%= time_ago_in_words(film.created_at) %> ago
         </td>
-        <!-- Display film.created_at end -->
 
-        <!-- Display film.updated_at start -->
         <td>
           <%= time_ago_in_words(film.updated_at) %> ago
         </td>
-        <!-- Display film.updated_at end -->
 
         <td>
           <a href="/films/<%= film.id %>">
