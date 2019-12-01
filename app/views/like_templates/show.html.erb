@@ -1,0 +1,109 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Like #<%= @like.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/likes" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link like start -->
+      <div class="col">
+        <a href="/likes/<%= @like.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit like
+        </a>
+      </div>
+      <!-- Edit link like end -->
+
+      <!-- Delete link like start -->
+      <div class="col">
+        <a href="/delete_like/<%= @like.id %>" class="btn btn-block btn-outline-secondary">
+          Delete like
+        </a>
+      </div>
+      <!-- Delete link like end -->
+    </div>
+
+    <dl>
+      <dt>
+        Users
+      </dt>
+      <!-- Display users_id start -->
+      <dd>
+        <%= @like.users_id %>
+      </dd>
+      <!-- Display users_id end -->
+
+      <dt>
+        Films
+      </dt>
+      <!-- Display films_id start -->
+      <dd>
+        <%= @like.films_id %>
+      </dd>
+      <!-- Display films_id end -->
+
+      <dt>
+        Shows
+      </dt>
+      <!-- Display shows_id start -->
+      <dd>
+        <%= @like.shows_id %>
+      </dd>
+      <!-- Display shows_id end -->
+
+      <dt>
+        Podcasts
+      </dt>
+      <!-- Display podcasts_id start -->
+      <dd>
+        <%= @like.podcasts_id %>
+      </dd>
+      <!-- Display podcasts_id end -->
+
+      <dt>
+        Articles
+      </dt>
+      <!-- Display articles_id start -->
+      <dd>
+        <%= @like.articles_id %>
+      </dd>
+      <!-- Display articles_id end -->
+
+      <dt>
+        Books
+      </dt>
+      <!-- Display books_id start -->
+      <dd>
+        <%= @like.books_id %>
+      </dd>
+      <!-- Display books_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@like.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@like.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
