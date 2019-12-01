@@ -49,7 +49,7 @@ class BooksController < ApplicationController
     @book.title = params.fetch("title")
     @book.author = params.fetch("author")
     @book.description = params.fetch("description")
-    @book.users_id = params.fetch("users_id")
+    
     @book.genre_topic = params.fetch("genre_topic")
     @book.comments = params.fetch("comments")
 

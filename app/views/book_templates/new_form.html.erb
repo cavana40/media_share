@@ -46,15 +46,9 @@
   <!-- Label and input for description end -->
 
   <!-- Label and input for users_id start -->
-  <div class="form-group">
-    <label for="users_id">
-      Users
-    </label>
-
-    <!-- Input for users_id start -->
-    <%= select_tag(:users_id, options_from_collection_for_select(User.all, :id, :email, @book.users_id), :class => "form-control") %>
-    <!-- Input for users_id end -->
-  </div>
+  <!-- Input for "users_id" start -->
+  <input type="hidden" name="users_id" value="<%= current_user.id %>">
+  <!-- Input for "users_id" end -->
   <!-- Label and input for users_id end -->
 
   <!-- Label and input for genre_topic start -->
