@@ -48,7 +48,7 @@ class FilmsController < ApplicationController
 
     @film.title = params.fetch("title")
     @film.source = params.fetch("source")
-    @film.users_id = params.fetch("users_id")
+    
     @film.genre_topic = params.fetch("genre_topic")
     @film.description = params.fetch("description")
     @film.comments = params.fetch("comments")
