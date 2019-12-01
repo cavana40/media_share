@@ -1,6 +1,10 @@
 class Film < ApplicationRecord
   # Direct associations
 
+  has_many   :likes,
+             :foreign_key => "films_id",
+             :dependent => :destroy
+
   belongs_to :users,
              :class_name => "User"
 

@@ -1,6 +1,11 @@
 class Like < ApplicationRecord
   # Direct associations
 
+  belongs_to :films,
+             :required => false,
+             :class_name => "Film",
+             :counter_cache => true
+
   belongs_to :podcasts,
              :required => false,
              :class_name => "Podcast",
