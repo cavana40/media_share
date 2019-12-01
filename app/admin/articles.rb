@@ -1,4 +1,6 @@
 ActiveAdmin.register Article do
+
+ permit_params :title, :author, :link, :users_id, :genre_topic, :description, :comments
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
