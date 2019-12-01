@@ -38,7 +38,7 @@
     </label>
 
     <!-- Input for podcasts_id start -->
-    <input type="text" id="podcasts_id" name="podcasts_id" class="form-control" value="<%= @like.podcasts_id %>">
+    <%= select_tag(:podcasts_id, options_from_collection_for_select(Podcast.all, :id, :title, @like.podcasts_id), :class => "form-control") %>
     <!-- Input for podcasts_id end -->
   </div>
   <!-- Label and input for podcasts_id end -->
