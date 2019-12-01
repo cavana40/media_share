@@ -1,4 +1,14 @@
 class ShowsController < ApplicationController
+  before_action :current_user_must_be_show_users, :only => [:edit_form, :update_row, :destroy_row]
+
+  def current_user_must_be_show_users
+    show = Show.find(params["id_to_display"] || params["prefill_with_id"] || params["id_to_modify"] || params["id_to_remove"])
+
+    unless current_user == show.users
+      redirect_to :back, :alert => "You are not authorized for that."
+    end
+  end
+
   def index
     @shows = Show.all
 
