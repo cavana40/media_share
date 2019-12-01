@@ -48,7 +48,7 @@ class ShowsController < ApplicationController
 
     @show.title = params.fetch("title")
     @show.source = params.fetch("source")
-    @show.users_id = params.fetch("users_id")
+    
     @show.genre_topic = params.fetch("genre_topic")
     @show.description = params.fetch("description")
     @show.comments = params.fetch("comments")
